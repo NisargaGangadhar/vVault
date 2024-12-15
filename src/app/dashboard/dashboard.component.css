@@ -1,0 +1,275 @@
+.container {
+  display: flex; /* Use flexbox for layout */
+  height: 100%; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  position: fixed;
+}
+
+.left-half {
+  width: 200px; /* Fixed width for left section */
+  height: 100%; /* Full height of viewport */
+  background-color: white; /* White background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Include padding/border in width calculation */
+  flex-direction: column;
+}
+
+.right-half {
+  width: calc(100% - 200px); /* Remaining width after left section */
+  height: 100%; /* Full height of viewport */
+  background-color: #EEEEEE; /* Light gray background */
+  display: flex; /* Enable flexbox */
+  flex-direction: row; /* Arrange children (columns) horizontally */
+  box-sizing: border-box; /* Include padding/border in width calculation */
+  
+}
+
+.first-half {
+  width: 80%; /* Occupy most of the right-half */
+  height: 100%; /* Full height */
+  background-color: #DDDDDD; /* Slightly different background for clarity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Include padding/border in width calculation */
+  flex-direction: column;
+}
+
+.second-half {
+  width: 20%; /* Occupy the rest of the right-half */
+  height: 100%; /* Full height */
+  background-color: white; /* Slightly different background for clarity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Include padding/border in width calculation */
+  flex-direction: column;
+}
+
+.title {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: flex-start; /* Align content to the start (left) horizontally */
+  align-items: flex-start; /* Align content to the top vertically */
+  height: 20%; /* Set a height for the container */
+  font-weight: 500;
+  font-size: 48px;
+  color: #545454;
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  line-height: 57.6px;
+  margin-top: 0%;
+  margin-left: 3%;
+}
+
+.category{
+    width: 200px;
+    display: flex; /* Use flexbox for alignment */
+    height: 100%; /* Ensure the div has a height to position content within */
+    font-weight: 700;
+    font-size: 20px;
+    color: #545454; 
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    line-height: 24px;
+    justify-content: left;
+    align-items: left;
+    margin-left: 0%;
+}
+
+.dash-logo{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin-left: -100px;
+        margin-top: 50%;
+        margin-right: 5%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  
+}
+
+.top-heading{
+  position: relative;
+  font-weight: 500;
+  font-size: 36px;
+  color: #000000; 
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  line-height: 12.2px;
+  padding-left: 5%;
+
+}
+.date-heading{
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  color: #575757; 
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  line-height: 0.2px;
+}
+
+
+.rectangle-box {
+  width: 900px; /* Set width of the rectangle */
+  height: 206px; /* Set height of the rectangle */
+  background-color: white; /* Set white background */
+  border: 1px solid #ccc; /* Optional: Add a border */
+  padding-left: 20px; /* Optional: Add padding inside the rectangle */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  text-align: left;
+  border-radius: 15px; /* Rounds the corners */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates 2 equal-width columns */
+  gap: 10px; 
+  margin-left: 5%;
+}
+
+.dash-title-pic{
+  width: 280px; /* Set a fixed width for the profile image */
+  height: 240px; /* Set a fixed height to maintain the aspect ratio */
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  top: -60px; /* Alternatively, this also moves the image up */
+  position: relative;
+}
+
+.name-1 {
+  margin: 0; /* Remove default margin */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold; /* Optional: make the name bold */
+  margin-top: 7%;
+  margin-left: -8%;
+}
+
+.profile {
+  margin-top: 5%;
+  position: relative;
+  width: 150px; /* Set width of the rectangle */
+  height: 100px; /* Set height of the rectangle */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates 2 equal-width columns */
+  gap: 10px; 
+  margin-left: 45%;
+ 
+}
+
+.profile-pic {
+    width: 60px; /* Set a fixed width for the profile image */
+    height: 60px; /* Set a fixed height to maintain the aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 0px; /* Add space between the image and the name */
+}
+
+.cat-heading{
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  color: #575757; 
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  line-height: 46.2px;
+  height: 50px;
+  border-bottom: #000000 1px solid;
+  width: 850px;
+  margin-left: 5%;
+}
+
+.folder-box {
+  position: relative;
+  width: 900px; /* Set width of the rectangle */
+  height: 100%; /* Set height of the rectangle */
+  padding-left: 20px; /* Optional: Add padding inside the rectangle */
+  text-align: left;
+  border-radius: 15px; /* Rounds the corners */
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; Creates 2 equal-width columns */
+  gap: 10px; 
+  margin-top: -7%;
+  margin-left: 5%;
+  display: flex; /* Arrange boxes in a row */
+  flex-wrap: wrap; /* Wrap to the next row if not enough space */
+  gap: 10px; /* Add space between boxes */
+  padding: 10px; /* Optional padding around the container */
+ 
+}
+
+
+.chart-box {
+  position: relative;
+  width: 300px; /* Set width of the rectangle */
+  height: 350px; /* Set height of the rectangle */
+  background-color: white; /* Set white background */
+  border: 1px solid #ccc; /* Optional: Add a border */
+  padding-left: 20px; /* Optional: Add padding inside the rectangle */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates 2 equal-width columns */
+  gap: 10px; 
+  margin-left: 1%;
+  margin-right: 2%;
+  margin-top: -12%;
+}
+
+.folder-grid {
+  width: 150px;
+  height: 50px;
+  display: inline-flex; /* Ensure box width matches content */
+  background-color: white; /* Light gray background */
+  border: 1px solid #ccc; /* Border around each box */
+  border-radius: 5px; /* Rounded corners for each box */
+  padding: 5px 10px; /* Padding inside each box */
+  font-size: 16px; /* Font size for the text */
+  color: #575757; /* Text color */
+  text-align: center; /* Center text horizontally */
+  white-space: wrap; /* Prevent names from wrapping within the box */
+  margin-right: 20px;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  cursor: pointer; /* Makes the div look clickable */
+  transition: background-color 0s ease; /* Smooth transition */
+}
+
+.folder-grid.black {
+  background-color: black;
+  color: white; /* Optional: Change text color for better readability */
+}
+
+.folder-logo{
+  width: 50px; /* Set a fixed width for the profile image */
+  height: 50px;
+
+}
+.plus-logo{
+  width: 15px; /* Set a fixed width for the profile image */
+  height: 15px;
+
+}
+
+.add-folder-grid {
+  width: 150px;
+  height: 50px;
+  display: inline-flex; /* Ensure box width matches content */
+  border: 2px dotted #ccc; /* Border around each box */
+  border-radius: 5px; /* Rounded corners for each box */
+  padding: 5px 10px; /* Padding inside each box */
+  font-size: 16px; /* Font size for the text */
+  color: #575757; /* Text color */
+  text-align: center; /* Center text horizontally */
+  white-space: wrap; /* Prevent names from wrapping within the box */
+  margin-right: 20px;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+
+
+
+
+

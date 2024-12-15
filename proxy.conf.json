@@ -1,0 +1,9 @@
+{
+    "/vault/*": {
+      "target": "https://www.vvault.cloud",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

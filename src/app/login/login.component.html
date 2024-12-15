@@ -1,0 +1,28 @@
+<div class="container">
+<p class="font-container3">vVault</p>
+<p class="font-container">STANDARD</p>
+
+
+<div class="rect-container">
+    <img src="../assets/images/login_rect.png" alt="Description of the image" />
+</div>
+  
+<div class="login-container">
+    <img src="../assets/images/login1.png" alt="Description of the image" /> 
+</div>
+
+<p class="font-container-1" style="text-align: right;">Log in</p>   
+<div class="font-container-2">
+    <br>
+<p style="text-align: center;">Hello! Welcome Back, Please use <br> the credentials provided to login.</p>
+<textarea placeholder="Email" [(ngModel)]="email" name="email"></textarea>
+<br> <br>
+<!-- <textarea placeholder="Password" [(ngModel)]="password" name="password"></textarea> -->
+<input type="password"placeholder="Password"[(ngModel)]="password"name="password"/>
+<br><br>
+<button class="rounded-button" (click)="onSubmit()">Let's Start!</button>
+<br>
+<br>
+<p style="text-align: center;"><strong>Forgot Password?</strong> Please contact the administrator</p>
+</div>
+</div>

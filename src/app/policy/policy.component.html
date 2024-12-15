@@ -1,0 +1,51 @@
+<div class="container">
+
+    <div class="row top-row">
+        <button class="back-button" (click)="goBack()">Back</button>
+        <div class="fol-heading">
+            <img src="../assets/images/folder-icon.png" alt="folder icon" class="folder-logo" />
+            Policy<br><p style="margin-top: -1%; font-size: small;color: #575757;">Last Updated: Sunday, 26 May 2024</p>
+            <div class="profile">
+                <input type="text" class="search-bar" placeholder="Search..." />
+                <img src="../assets/images/profile-pic.jpg" alt="Profile Picture" class="profile-pic" />
+                <p class="name-1">Nisarga G <br> Product</p>
+            </div>
+        </div>
+      </div>
+      <div class="row bottom-row">
+        <div class="row-1">
+            <p class="cat-heading">Folders</p>
+            <div>
+            <div class="folder-box">
+                <div class="folder-grid" 
+                (click)="turnBlack(folder)" 
+                [class.black]="selectedFolder === folder"  *ngFor="let folder of folders" [routerLink]="'/policy'" >
+                 <img src="../assets/images/folder-logo.jpg" alt="folder Picture" class="folder-logo" />
+                     {{ folder }}
+                   </div>
+                   <div class="add-folder-grid">
+                     <img src="../assets/images/plus.png" alt="folder Picture" class="plus-logo" />
+                     Add Folder
+                   </div> 
+             </div>
+             <div class="doc-head">
+                HR >> Documents
+                <div class="share-delete">
+                <button class="sh-de-but" (click)="goBack()">Share</button> &nbsp;
+                <button class="sh-de-but" (click)="goBack()">Delete</button>
+            </div>
+            </div>
+            <div>
+                <button class="upload-but" (click)="goBack()">Upload Document</button>
+            </div>
+            <div>
+                <img src="../assets/images/doc.jpg" alt="doc list Picture" class="doc-list" />
+            </div>
+            
+            </div>
+            
+            
+        </div>
+      </div>
+
+</div>

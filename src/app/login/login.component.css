@@ -1,0 +1,159 @@
+
+
+.image-container {
+    position: absolute; /* Ensures the image stays in the same position even when the page is scrolled */
+    top: 29px; /* Aligns the image to the top */
+    right: 0; /* Aligns the image to the right */
+    left: 1109px;
+  }
+  
+  .image-container img {
+    width: 344px; /* Adjust the size of the image as needed */
+    height: 130px; /* Ensures the image retains its aspect ratio */
+  }
+  
+.font-container{
+    position: absolute;
+    width: 188px;
+    height: 28px;
+    top: 50px;
+    left:1300px;
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38.4px;
+    text-align: right;
+    color: #757575;
+    padding-top: 10px;
+}
+
+.font-container3{
+  position: absolute;
+  width: 188px;
+  height: 28px;
+  top: 0px;
+  left:1300px;
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  color: #545454; 
+  line-height: 38.4px;
+  text-align: right;   
+}
+
+.font-container-1{
+    position: absolute;
+    width: 188px;
+    height: 28px;
+    top: 200px;
+    left: 1109px;
+    right: 0;
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38.4px;
+    text-align: center;
+    color: #545454;
+}
+.font-container-2{
+    position: absolute;
+    top: 300px;
+    left: 1109px;
+    text-align: left;
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    color: #545454;
+    width: 350px;
+    height: 300px;
+    top: 250px;
+    left: 1106px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.rect-container{
+    position: relative;
+    width: 71px;
+    height: 632px;
+    top: 62px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.login-container{
+    position: absolute;
+    height: 748px;
+    top: 30px;
+    left: 50px;
+    transform: scaleX(-1);
+
+}
+
+ textarea {
+    width: 92%; /* Set the width to fill its container (optional) */
+    height: 20px; /* Set the height of the text area */
+    padding: 10px; /* Add some padding inside the text area */
+    border-radius: 15px; /* Makes the corners rounded */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    outline: none; /* Remove default outline on focus */
+    resize: none; /* Optional: Disable resizing if desired */
+    font-size: 16px; /* Optional: Set font size */
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    color: black;
+    background-color:#EEEEEE;
+    
+  }
+  
+ textarea:focus {
+    border-color: #5A9; /* Optional: Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); /* Optional: Add shadow on focus */
+  }
+
+  .rounded-button {
+    width: 100%;
+    background-color: #FDE714;
+ /* Set the yellow background */
+    color: "#333333"; /* Text color */
+    padding: 10px 20px; /* Padding to make the button larger */
+    border: none; /* Remove the default border */
+    border-radius: 15px; /* Make the corners rounded */
+    font-size: 16px; /* Set the font size */
+    cursor: pointer; /* Change cursor to pointer when hovered */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+  }
+  
+  .rounded-button:hover {
+    background-color: gold; /* Change the background color on hover */
+  }
+
+  input[type="password"] {
+    width: 100%; /* Set the width to fill its container */
+    padding: 10px 20px; /* Add padding inside the input */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color and style */
+    outline: none; /* Remove default outline */
+    font-size: 16px; /* Font size */
+    font-family: 'Apple SD Gothic Neo', sans-serif; /* Font family */
+    color: black; /* Text color */
+    background-color: #EEEEEE; /* Background color */
+    box-sizing: border-box; /* Include padding in the total width and height */
+  }
+  
+  input[type="password"]:focus {
+    border-color: #5A9; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); /* Add shadow on focus */
+  }
+
+  .container{
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 90vh; /* Full viewport height */
+  width:100vh;
+  /* box-sizing: border-box; Ensure padding is included in dimensions */
+  }
+  
+  
+  
+  

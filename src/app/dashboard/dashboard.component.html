@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="left-half">
+      <div class="category">
+          <p class="title">vVault</p>
+         <img class="dash-logo" src="../assets/images/dashboard_logo.png" alt="Description of the image" />
+         <p style="margin-top: 50%;">Dashboard</p>
+       </div>
+  </div>
+  <div class="right-half">
+      <div class="first-half">
+      <div class="row">
+          <div class="top-heading"><p>Dashboard</p><p class="date-heading">Sunday, 26 May 2024</p></div>
+          <div class="profile">
+              <img src="../assets/images/profile-pic.jpg" alt="Profile Picture" class="profile-pic" />
+              <p class="name-1">Nisarga G <br> Product</p>
+          </div>
+    </div>
+
+
+<div class="row">
+  
+  <div class="rectangle-box">
+         
+      <img src="../assets/images/dash-image.png" alt="dashboard title Picture" class="dash-title-pic" />
+    
+    <div class="column">
+      <p style="font-family: 'Apple SD Gothic Neo', sans-serif; font-weight: 700; font-size: 24px;">Hello, Nisarga G </p>
+      <p style="font-family: 'Apple SD Gothic Neo', sans-serif; font-weight: 600; font-size: 14px; color: #575757;">Welcome to vVault!</p>
+      <p style="font-family: 'Apple SD Gothic Neo', sans-serif; font-weight: 300; font-size: 14px; color: #575757;">This tool facilitates assessing various processes involved in production, quality control, and overall operational efficiency. </p> 
+    </div>
+</div>
+
+</div>
+<div class="row">
+  <p class="cat-heading">Folders</p>
+</div>
+
+<div class="row">
+  <div class="folder-box">
+     <div class="folder-grid" 
+     (click)="turnBlack(folder)" 
+     [class.black]="selectedFolder === folder"  *ngFor="let folder of folders" [routerLink]="'/policy'" >
+      <img src="../assets/images/folder-logo.jpg" alt="folder Picture" class="folder-logo" />
+          {{ folder }}
+        </div>
+        <div class="add-folder-grid">
+          <img src="../assets/images/plus.png" alt="folder Picture" class="plus-logo" />
+          Add Folder
+        </div> 
+  </div>
+</div>
+
+</div>
+  <div class="second-half">
+      <img src="../assets/images/pie-chart.jpg" alt="dashboard title Picture" class="pie-pic" />
+  </div>
+</div>
+</div>
