@@ -3,6 +3,7 @@
   height: 100%; /* Full viewport height */
   width: 100%; /* Full viewport width */
   position: fixed;
+  margin-top: 2%;
 }
 
 .left-half {
@@ -100,6 +101,7 @@
   font-family: 'Apple SD Gothic Neo', sans-serif;
   line-height: 12.2px;
   padding-left: 5%;
+  margin-top: 5%;
 
 }
 .date-heading{

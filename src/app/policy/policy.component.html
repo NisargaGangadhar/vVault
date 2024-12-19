@@ -23,7 +23,7 @@
                  <img src="../assets/images/folder-logo.jpg" alt="folder Picture" class="folder-logo" />
                      {{ folder }}
                    </div>
-                   <div class="add-folder-grid">
+                   <div class="add-folder-grid" (click)="openAddFolderDialog()" >
                      <img src="../assets/images/plus.png" alt="folder Picture" class="plus-logo" />
                      Add Folder
                    </div> 
@@ -36,10 +36,37 @@
             </div>
             </div>
             <div>
-                <button class="upload-but" (click)="goBack()">Upload Document</button>
+                <!-- <button class="upload-but" (click)="">Upload Document</button> -->
+                <div class="upload-but">
+                    <button mat-raised-button color="primary" (click)="fileInput.click()">Upload Document</button>
+                    <input 
+                      type="file" 
+                      #fileInput 
+                      (change)="onFileSelected($event)" 
+                      hidden 
+                    />
+                 
+                  
+                  <div *ngIf="selectedFile">
+                    <p>Selected File: {{ selectedFile.name }}</p>
+                    <button mat-raised-button color="accent" (click)="uploadFile()">Upload</button>
+                  </div>
+                </div>
+                                    
+
+
+
+
+
+
             </div>
-            <div>
-                <img src="../assets/images/doc.jpg" alt="doc list Picture" class="doc-list" />
+            <div class="list-files">
+                <!-- <img src="../assets/images/doc.jpg" alt="doc list Picture" class="doc-list" /> -->
+                <div style="border-bottom: 1px black solid;" *ngFor="let file of files">
+                    <!-- Optional image -->
+                    <!-- <img src="../assets/images/doc.jpg" alt="doc list Picture" class="doc-list" /> -->
+                    <p>{{ file }}</p>
+                  </div>
             </div>
             
             </div>

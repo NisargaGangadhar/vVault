@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Add Folder</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Folder Name</mat-label>
+    <input matInput [(ngModel)]="folderName" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [disabled]="!folderName" (click)="onAddClick()">Add</button>
+</div>
