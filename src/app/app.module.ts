@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { RevisionHistoryDialogComponent } from './revision-history-dialog/revision-history-dialog.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MatButtonModule } from '@angular/material/button';
     LoginComponent,
     DashboardComponent,
     PolicyComponent,
-    AddFolderDialogComponent
+    AddFolderDialogComponent,
+    RevisionHistoryDialogComponent
   ],
   imports: [
     BrowserModule,

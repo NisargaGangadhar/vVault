@@ -4,6 +4,7 @@ import { FolderService } from '../folder.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { AddFolderDialogComponent } from '../add-folder-dialog/add-folder-dialog.component';
+import { RevisionHistoryDialogComponent } from '../revision-history-dialog/revision-history-dialog.component';
 
 @Component({
   selector: 'app-policy',
@@ -17,7 +18,10 @@ export class PolicyComponent {
   }
   folders: string[] = []; 
   selectedFile:any="";
+  comment: string="";
   files: any[]=[]; 
+  versions: string[]=[]; 
+  versions_comment: string[][] = [];
   folderName:string = "";
   isBlack: boolean = false;
   selectedFolder: string =""; // Track the clicked folder
@@ -77,14 +81,33 @@ export class PolicyComponent {
   
         // Extract filenames into a flat list
         this.files = response.Files.map((file) => file.filename);
-  
+        this.versions_comment = response.Files.map((file) => file.versions[0].comment);
+        this.versions= response.Files.map((file) => file.versions.length + ".0.0");
+        this.versions_comment = response.Files.map((file) =>
+          file.versions.map((version: { comment: any; }) => version.comment) // Extract all comments
+        );
         console.log('Extracted Filenames:', this.files); // Log the list of filenames
+        console.log('Extracted version comments: ', this.versions_comment);
       },
       error: (error) => {
         console.error('Error fetching files:', error);
       }
     });
   }
+
+  showRevHistory(i:number): void{
+    console.log('the version comment for this particular file>>>', this.versions_comment[i]);
+    this.dialog.open(RevisionHistoryDialogComponent, {
+      data: {
+        // filename: this.files[i],
+        comments: this.versions_comment[i]
+      },
+      width: '400px'
+    });
+  }
+  
+
+ 
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -101,7 +124,7 @@ export class PolicyComponent {
       return;
     }
   
-    this.folderService.uploadFile(this.selectedFile, this.selectedFolder).subscribe({
+    this.folderService.uploadFile(this.selectedFile, this.selectedFolder, this.comment).subscribe({
       next: (response) => {
         console.log('File uploaded successfully', response);
         this.selectedFile='';

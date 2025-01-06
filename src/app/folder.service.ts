@@ -67,13 +67,13 @@ export class FolderService {
     );
   }
 
-  uploadFile(file: File, folder:string): Observable<any> {
+  uploadFile(file: File, folder:string, comment:string): Observable<any> {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('email', 'Admin@vvault.com');
     formData.append('password', 'Admin');
     formData.append('folder','Policy/'+folder);
-    formData.append('version_comment', 'Testing Version 7');
+    formData.append('version_comment', comment);
 
     const headers = new HttpHeaders();
 

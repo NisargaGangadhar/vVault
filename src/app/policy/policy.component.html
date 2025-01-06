@@ -47,26 +47,30 @@
                     />
                  
                   
-                  <div *ngIf="selectedFile">
+                  <div *ngIf="selectedFile"  class="centered-container">
                     <p>Selected File: {{ selectedFile.name }}</p>
+                    <textarea
+                    placeholder="Enter your comment"
+                    [(ngModel)]="comment"
+                    rows="3"
+                    class="comment-box"
+                  ></textarea>
                     <button mat-raised-button color="accent" (click)="uploadFile()">Upload</button>
                   </div>
                 </div>
                                     
-
-
-
-
-
-
             </div>
             <div class="list-files">
-                <!-- <img src="../assets/images/doc.jpg" alt="doc list Picture" class="doc-list" /> -->
-                <div style="border-bottom: 1px black solid;" *ngFor="let file of files">
-                    <!-- Optional image -->
-                    <!-- <img src="../assets/images/doc.jpg" alt="doc list Picture" class="doc-list" /> -->
-                    <p>{{ file }}</p>
-                  </div>
+              <div *ngFor="let file of files; let i = index" style="border-bottom: 1px gray solid; margin-bottom: 1%;">
+                <p>
+                  {{ file }}
+                  <button class="file-but"> Download</button>
+                  <button class="file-but">Share</button>
+                  <button class="rev-history-but" (click)="showRevHistory(i)">Rev history</button>
+                  <button class="file-but"> {{versions[i]}}</button>
+                </p>
+              </div>              
+                
             </div>
             
             </div>
